@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1 class="text-center">Pomodoro Clock</h1>
+    <div class="container bg-dark p-3 w-50">
+        <div class="btn-group w-100" role="group" aria-label="Opções" id="options">
+            <button type="button" class="btn btn-outline-danger active">Pomodoro</button>
+            <button type="button" class="btn btn-outline-danger">Short Break</button>
+            <button type="button" class="btn btn-outline-danger">Long Break</button>
+        </div>
+        <div class="container text-danger my-2 p-3 h1 text-center" id="timer"></div>
+        <div class="btn-group bg-dark w-100">
+            <button class="btn btn-success" type="button" id="playBttn">Play</button>
+            <button class="btn btn-danger" type="button" id="pauseBttn">Pause</button>
+            <button class="btn btn-warning" type="button" id="resetBttn">Reset</button>
+        </div>
+    </div>
+    <audio src="assets/audio/alarm.mp3" id="audioAlarm"></audio>
+
+    <!-- SCRIPTS -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JS -->
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
