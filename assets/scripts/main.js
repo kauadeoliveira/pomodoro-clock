@@ -1,3 +1,4 @@
+// Variaveis
 let time = 25 * 60
 let displayPomodoro = document.querySelector("#timer");
 let cron = null;

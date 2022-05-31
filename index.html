@@ -13,21 +13,37 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-dark">
-    <h1 class="text-center">Pomodoro Clock</h1>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark d-flex justify-content-center">
+            <a class="navbar-brand justify-self-start" href="#" id="logo">
+                <img src="assets/images/pomodoro-timer.png" alt="" >
+            </a>
+        
+            <ul class="navbar-nav d-flex justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Custom Pomodoro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Social</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Theme</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
     <div class="container bg-dark p-3 w-50">
+        
         <!-- OPTIONS -->
-        <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
-            
+        <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">    
             <input type="radio" class="btn-check" name="btnradio" id="pomodoroBttn" autocomplete="off" checked>
             <label class="btn btn-outline-danger" for="pomodoroBttn">Pomodoro</label>
-          
             <input type="radio" class="btn-check" name="btnradio" id="shortBreakBttn" autocomplete="off">
             <label class="btn btn-outline-danger" for="shortBreakBttn">Short Break</label>
-          
             <input type="radio" class="btn-check" name="btnradio" id="longBreakBttn" autocomplete="off">
             <label class="btn btn-outline-danger" for="longBreakBttn">Long Break</label>
-            <input type="radio" class="btn-check" name="btnradio" id="longBreakBttn" autocomplete="off">
-          </div>
+        </div>
+
 
 
 
