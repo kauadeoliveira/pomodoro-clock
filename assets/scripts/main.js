@@ -4,6 +4,9 @@ let displayPomodoro = document.querySelector("#timer");
 let cron = null;
 
 
+let theme = 'dark'
+
+
 
 function updateTime() {
     let min = Math.floor(time / 60) 
@@ -72,3 +75,50 @@ function pomodoroOption(){
     }
     updateTime()
 }
+
+
+$("#themeBttn").click(() => {
+    if(theme === 'dark'){
+        theme = 'light'
+        lightMode()
+    }
+    else{
+        theme = 'dark'
+        darkMode()
+    }
+})
+
+function lightMode(){
+    // Theme Button
+    $("#themeIcon").attr("class", "bi bi-brightness-high-fill mx-1")
+    $("#themeBttn > p").text("Light Mode")
+
+    // Custom Button
+    $("#customIcon").attr("class", "bi bi-gear-fill mx-1")
+
+    // Logo
+    $("#logo > span").css("color", "black")
+
+    // Body / Nav
+    $("body").attr("class", "bg-light")
+    $("nav").removeClass("navbar-dark")
+}
+
+function darkMode(){
+    // Theme Button
+    $("#themeIcon").attr("class", "bi bi-moon mx-1 mx-1")
+    $("#themeBttn > p").text("Dark Mode")
+
+    // Custom Button
+    $("#customIcon").attr("class", "bi bi-gear mx-1")
+
+    // Logo
+    $("#logo > span").css("color", "white")
+
+    // Body / Nav
+    $("body").attr("class", "bg-dark")
+    $("nav").addClass("navbar-dark")
+
+
+}
+

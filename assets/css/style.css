@@ -3,15 +3,84 @@
     padding: 0;
     margin: 0;
 }
+body{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
+}
 
 img{
     width: 50px;
 }
 
-header{
-    border-bottom: 1px solid tomato;
-}
+
 
 #logo{
-    justify-self: start;
+    font-size: 1.5rem;
 }
+
+
+@media screen and (min-width: 992px) {
+    #containerBttns{
+        width: 50%;
+    }
+}
+
+.nav-link:hover{
+    transition: 0.3s;
+    color: rgb(220, 53, 69) !important;
+}
+
+#timer{
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+
+#containerProgress{
+    display: none; /* CONTAINER PROGRESS TERMINAR!! */ 
+    top: 30%;
+    left: 40%;
+    position: absolute;
+    text-align: center;
+    transform: (-50%, -50%);
+}
+
+.ui-widgets{
+    position: relative;
+    display: inline-block;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 12.5rem;
+    margin:1.5rem;
+    border: 1rem solid #ffffff;
+    box-shadow: inset 0 0 7px grey;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+.ui-widgets .ui-values {
+    top: 40px;
+    position: absolute;
+    left: 10px;
+    right: 0;
+    font-weight: 700;
+    font-size: 2.0rem;
+}
+
+.ui-widgets .ui-labels {
+    left: 0;
+    bottom: -16px;
+    text-shadow: 0 0 4px grey;
+    color:black;
+    position: absolute;
+    width: 100%;
+    font-size: 16px;
+}
+
+h5{
+    font-weight: bold;
+    color: rgb(220, 53, 69);
+}
+
