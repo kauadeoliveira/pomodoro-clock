@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TOMATO TIMER</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Varela+Round&display=swap" rel="stylesheet">
+    
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Varela+Round&display=swap" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -25,8 +27,8 @@
 
         <nav class="navbar navbar-expand-md navbar-dark px-2 mb-3">
             <a class="navbar-brand d-flex align-items-center text-light" href="#" id="logo">
-                <img src="assets/images/pomodoro-timer.png" alt="Pomodoro Timer Logo">
-                <span style="font-family: 'Concert One', cursive;" class="mx-1">POMODORO TIMER</span>
+                <img src="assets/images/tomatoclock-2.png" alt="Pomodoro Timer Logo">
+                <span style="font-family: 'Concert One', cursive;">TOMATO TIMER</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +38,7 @@
                 <ul class="navbar-nav d-flex align-items-center" id="navbarUl">
                     <li class="nav-item">
                         <!-- CUSTOM POMODORO 1 -->
-                        <a class="nav-link" href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a class="nav-link" href="#" type="button" data-bs-toggle="modal" data-bs-target="#pomodoroModal">
                             <div class="d-flex">
                                 <i class="bi bi-gear mx-1" id="customIcon"></i>
                                 <p>Custom Pomodoro</p>
@@ -45,21 +47,21 @@
 
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="pomodoroModal" tabindex="-1" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                            <div class="modal-content bg-dark text-light">
+                            <div class="modal-content bg-dark text-light" id="modalContent">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Pomodoro Custom</h5>
+                                <h5 class="modal-title" id="pomodoroModalLabel">Pomodoro Custom</h5>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body d-flex flex-column">
-                                Pomodoro (minutes): <input type="number" id="" class="w-50 mb-1">
-                                Short Break (minutes): <input type="number" id="" class="w-50 mb-1">
-                                Long Break (minutes): <input type="number" id="" class="w-50 mb-1">
+                                Pomodoro (minutes): <input type="number" id="pomodoroTime" class="w-50 mb-1 py-1">
+                                Short Break (minutes): <input type="number" id="shortTime" class="w-50 mb-1 py-1">
+                                Long Break (minutes): <input type="number" id="longTime" class="w-50 mb-1 py-1">
                                 </div>
                                 <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" id="defaultPomodoro">Default</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="savePomodoro">Save Changes</button>
                                 </div>
                             </div>
                             </div>
@@ -105,7 +107,7 @@
             </div>
 
 
-        <div class="container text-danger my-2 p-3 display-1 text-center d-flex align-items-center justify-content-center" id="timer" style="height: 300px;">
+        <div class="container text-danger my-2 p-3 display-1 text-center d-flex align-items-center justify-content-center" id="timer">
         </div>
         <div class="btn-group bg-dark w-100">
             <button class="btn btn-success" type="button" id="playBttn">Play</button>
