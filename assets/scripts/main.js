@@ -101,9 +101,9 @@ function pomodoroCustom(){
 
 // -> Default Button
 function defaultPomodoroBttn(){
-    $("#pomodoroTime").attr("value", 25);
-    $("#shortTime").attr("value", 5);
-    $("#longTime").attr("value", 30);
+    $("#pomodoroTime").val(25)
+    $("#shortTime").val(5)
+    $("#longTime").val(30)
 }
 
 // -> Click Event
